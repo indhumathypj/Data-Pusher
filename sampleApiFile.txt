@@ -1,0 +1,113 @@
+ACCOUNT CRUD
+---------
+Account creation:
+-----------------
+Method: POST
+URL: http://localhost:3000/account/
+Body:
+{
+  "email": "mathy@example.com",
+  "name": "Example User",
+  "website": "https://example.com"
+}
+
+Get all Account:
+---------------
+Method: GET
+URL: http://localhost:3000/account/
+
+
+Get Particular Account with id:
+-------------------------------
+Method: GET
+URL: http://localhost:3000/account/:id
+
+Update Particular Account with id:
+---------------------------------
+
+Method: PUT
+URL: http://localhost:3000/account/:id
+Body:
+{
+  "email": "mathy@example.com",
+  "name": "Example User",
+  "website": "https://example.com"
+}
+
+Delete Particular Account with id:
+-------------------------------
+Method: DELETE
+URL: http://localhost:3000/account/:id
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Destination CRUD
+
+Destination creation :
+---------------------
+Method: POST
+URL: http://localhost:3000/destination/
+Body:
+{
+  "accountId": "4d818ac2-7014-440a-a7c2-b1d70c910dad",
+  "url": "https://webhook.site/8b228117-2b1f-4064-83fa-019179a4ff9",
+  "httpMethod": "POST",
+  "headers": {
+    "APP_ID": "1234APPID1234",
+    "APP_SECTET": "enwdj3bshwer43bjhjs9ereuinkjcnsiurew8s",
+    "ACTION": "user.update",
+    "Content-Type": "application/json",
+    "Accept": "*"
+  }
+}
+
+Get All Destinations :
+---------------------
+Method: GET
+URL: http://localhost:3000/destination/
+
+
+Get Particular destination with id:
+-------------------------------
+Method: GET
+URL: http://localhost:3000/destination/:id
+
+Update Particular destination with id:
+---------------------------------
+
+Method: PUT
+URL: http://localhost:3000/destination/:id
+Body:
+{
+  "accountId": "4d818ac2-7014-440a-a7c2-b1d70c910dad",
+  "url": "https://webhook.site/8b228117-2b1f-4064-83fa-019179a4ff9",
+  "httpMethod": "POST",
+  "headers": {
+    "APP_ID": "1234APPID1234",
+    "APP_SECTET": "enwdj3bshwer43bjhjs9ereuinkjcnsiurew8s",
+    "ACTION": "user.update",
+    "Content-Type": "application/json",
+    "Accept": "*"
+  }
+}
+
+Delete Particular destination with id also deletes in account:
+-------------------------------
+Method: DELETE
+URL: http://localhost:3000/destination/:id
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+Send Data to destinations via Webhook :
+-------------------------------------
+URL : http://localhost:3000/server/incoming_data/
+Method : POST
+Body :
+{
+  "data": "updated"
+}
+
+
+
+
+
